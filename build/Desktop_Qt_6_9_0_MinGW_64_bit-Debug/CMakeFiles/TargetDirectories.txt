@@ -1,0 +1,9 @@
+G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/ChatApp.dir
+G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/install.dir
+G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/ChatApp_autogen_timestamp_deps.dir
+G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/ChatApp_autogen.dir
