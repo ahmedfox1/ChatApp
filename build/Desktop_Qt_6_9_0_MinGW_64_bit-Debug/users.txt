@@ -1,0 +1,3 @@
+1001,01012345678,123,Ahmed,Hassan,I'm a football fan!,1
+1002,01087654321,abc123,Mona,Ali,Loves reading books.,1
+1003,01111222333,test321,Khaled,Omar,Software Engineer.,0
