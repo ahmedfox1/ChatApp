@@ -2,6 +2,7 @@
 #define CREATEACCOUNT_H
 
 #include <QWidget>
+#include "DataManager.h"
 
 namespace Ui {
 class CreateAccount;
@@ -12,7 +13,7 @@ class CreateAccount : public QWidget
     Q_OBJECT
 
 public:
-    explicit CreateAccount(QWidget *parent = nullptr);
+    explicit CreateAccount(dataManager* manager, QWidget *parent = nullptr);
     ~CreateAccount();
 
 private slots:
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::CreateAccount *ui;
+    dataManager* dataManagerInstance;  // بوينتر على الذاكرة الأصلية
 };
 
 #endif // CREATEACCOUNT_H

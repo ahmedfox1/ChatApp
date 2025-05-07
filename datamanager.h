@@ -17,7 +17,7 @@ public:
     vector<User> users;
 
 private:
-    static const string userFile;  // إعلان فقط هنا
+    static const string userFile;
 };
 
 #endif // DATAMANAGER_H

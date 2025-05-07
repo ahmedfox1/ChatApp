@@ -3,59 +3,41 @@
 #include <sstream>
 #include <iostream>
 
-using namespace std;
-
-const string dataManager::userFile = "users.txt";
+const string dataManager::userFile = "users.txt"; // تحديد ملف المستخدمين
 
 dataManager::dataManager() {}
 
 void dataManager::loadUsersFromFile() {
-    ifstream file(userFile);
-    if (!file.is_open()) {
-        cerr << "Unable to open " << userFile << endl;
-        return;
+    users.clear();  // تفريغ البيانات السابقة
+    std::ifstream file(userFile);
+    std::string line;
+    while (std::getline(file, line)) {
+        std::stringstream ss(line);
+        std::string id, mobile, pass, fname, lname, description, visibility;
+        std::getline(ss, id, ',');
+        std::getline(ss, mobile, ',');
+        std::getline(ss, pass, ',');
+        std::getline(ss, fname, ',');
+        std::getline(ss, lname, ',');
+        std::getline(ss, description, ',');
+        std::getline(ss, visibility);
+
+        // تحويل قيم visibility إلى قيمة bool
+        bool isVisible = (visibility == "true");
+
+        users.emplace_back(id, mobile, pass, fname, lname, description, isVisible);
     }
-
-    string line;
-    while (getline(file, line)) {
-        while (!line.empty() && isspace(line[0])) line.erase(0, 1);
-        while (!line.empty() && isspace(line[line.size() - 1])) line.erase(line.size() - 1, 1);
-
-        istringstream iss(line);
-        string userID, mobileNumber, password, firstName, lastName, profileDescription, visibility;
-
-        getline(iss, userID, ',');
-        getline(iss, mobileNumber, ',');
-        getline(iss, password, ',');
-        getline(iss, firstName, ',');
-        getline(iss, lastName, ',');
-        getline(iss, profileDescription, ',');
-        getline(iss, visibility, ',');
-
-        bool isVisible = (visibility == "1");
-
-        User u(userID, mobileNumber, password, firstName, lastName, profileDescription, isVisible);
-        users.push_back(u);
-    }
-
-    file.close();
 }
+
 void dataManager::saveUsersToFile() {
-    ofstream file(userFile);
-    if (!file.is_open()) {
-        cerr << "Unable to open " << userFile << " for writing." << endl;
-        return;
+    std::ofstream file(userFile);
+    for (const auto& user : users) {
+        file << user.userID << ","
+             << user.mobileNumber << ","
+             << user.password << ","
+             << user.firstName << ","
+             << user.lastName << ","
+             << user.profileDescription << ","
+             << (user.isVisible ? "true" : "false") << "\n";
     }
-
-    for (const User& u : users) {
-        file << u.userID << ","
-             << u.mobileNumber << ","
-             << u.password << ","
-             << u.firstName << ","
-             << u.lastName << ","
-             << u.profileDescription << ","
-             << (u.isVisible ? "1" : "0") << "\n";
-    }
-
-    file.close();
 }

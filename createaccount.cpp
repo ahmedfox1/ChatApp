@@ -2,9 +2,10 @@
 #include "ui_createaccount.h"
 #include <QMessageBox>
 
-CreateAccount::CreateAccount(QWidget *parent)
+CreateAccount::CreateAccount(dataManager* manager, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::CreateAccount)
+    , dataManagerInstance(manager)
 {
     ui->setupUi(this);
 }
@@ -34,8 +35,23 @@ void CreateAccount::on_createAccount_bt_clicked()
         return;
     }
 
-    // هنا ممكن تضيف حفظ البيانات في ملف أو قاعدة بيانات لو عايز
+    // إنشاء ID جديد (بسيط جدًا، ممكن تعدله)
+    QString userID = QString::number(dataManagerInstance->users.size() + 1);
+
+    // إضافة المستخدم الجديد
+    User newUser(
+        userID.toStdString(),
+        phone.toStdString(),
+        password.toStdString(),
+        firstName.toStdString(),
+        lastName.toStdString(),
+        bio.toStdString(),
+        true
+        );
+
+    dataManagerInstance->users.push_back(newUser);  // الإضافة داخل الذاكرة فقط
+
     QMessageBox::information(this, "Account Created", "Your account has been created successfully!");
 
-    this->close();  // إغلاق نافذة إنشاء الحساب بعد النجاح
+    this->close();  // إغلاق النافذة
 }

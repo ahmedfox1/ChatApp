@@ -1,5 +1,7 @@
 G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ChatApp_autogen/EWIEGA46WW/moc_createaccount.cpp: G:/projects/ChatApp/ChatApp/createaccount.h \
   G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ChatApp_autogen/moc_predefs.h \
+  G:/projects/ChatApp/ChatApp/DataManager.h \
+  G:/projects/ChatApp/ChatApp/user.h \
   G:/qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   G:/qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
   G:/qt/6.9.0/mingw_64/include/QtCore/q20iterator.h \

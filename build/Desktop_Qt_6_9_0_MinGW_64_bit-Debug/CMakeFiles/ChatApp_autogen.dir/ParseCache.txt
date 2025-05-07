@@ -759,8 +759,10 @@ G:/projects/ChatApp/ChatApp/forgetpassword.cpp
  uic:ui_forgetpassword.h
 G:/projects/ChatApp/ChatApp/createaccount.h
  mmc:Q_OBJECT
+ mdp:G:/projects/ChatApp/ChatApp/datamanager.h
  mdp:G:/projects/ChatApp/ChatApp/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/ChatApp_autogen/moc_predefs.h
  mdp:G:/projects/ChatApp/ChatApp/createaccount.h
+ mdp:G:/projects/ChatApp/ChatApp/user.h
  mdp:G:/qt/6.9.0/mingw_64/include/QtCore/q17memory.h
  mdp:G:/qt/6.9.0/mingw_64/include/QtCore/q20functional.h
  mdp:G:/qt/6.9.0/mingw_64/include/QtCore/q20iterator.h
